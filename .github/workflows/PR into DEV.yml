@@ -9,7 +9,8 @@ on:
     workflow_dispatch:
 
 jobs:
-    build:
+    verify_pr_from_feature:
+        if: startsWith(github.head_ref, 'feature/')
         runs-on: ubuntu-latest
         steps:
             - name: Merging feature int DEV
