@@ -1,0 +1,20 @@
+name: PR into DEV 
+on:
+    pull_request:
+        types: 
+            - opened
+        branches: 
+            - 'dev'
+
+    workflow_dispatch:
+
+jobs:
+    verify_pr_from_feature:
+        # Only allow PR into dev via feature branch
+        if: startsWith(github.head_ref, 'feature/')
+        runs-on: ubuntu-latest
+        steps:
+            - name: Merging feature int DEV
+              run: |
+                echo "Merging feature into dev"
+                echo "branch from where pr originated ${{github.head_ref}}"

@@ -1,0 +1,16 @@
+name: Merge into DEV only from feature
+on:
+    pull_request:
+        types:
+            - closed
+
+
+jobs:
+    if_merged:
+        if: github.event.pull_request.merged == true
+        runs-on: ubuntu-latest
+        steps:
+            - name: Changes into dev merged
+              run: |
+                echo "Changes into dev merged"
+                echo " ${{ GITHUB_SHA }} "
