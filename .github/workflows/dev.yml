@@ -1,0 +1,14 @@
+name: DEV 
+on:
+    pull_request:
+        type: [opened]
+        branches: 
+            - 'feature/**'
+
+    workflow_dispatch:
+
+jobs:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Merging feature int DEV
+            run: echo "Merging feature into dev"
