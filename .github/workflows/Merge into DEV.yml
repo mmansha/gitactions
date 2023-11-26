@@ -1,0 +1,12 @@
+name: Merge into DEV only from feature
+on:
+    pull_request:
+
+
+jobs:
+    Merge_changes_into_dev
+    if: startsWith(github.head_ref, 'feature/')
+    runs-on: ubuntu-latest
+    steps:
+        - name: Merging into DEV
+          run: echo "The head of the PR starts with 'feature/' merge allowed"
