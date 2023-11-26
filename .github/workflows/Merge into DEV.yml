@@ -13,4 +13,6 @@ jobs:
             - name: Changes into dev merged
               run: |
                 echo "Changes into dev merged"
-                echo  "$GITHUB_SHA" 
+                echo  "SHA: $GITHUB_SHA" 
+                echo "Workflow run id: $GITHUB_RUN_ID"
+                echo "Workflow run execution number: $GITHUB_RUN_NUMBER"
