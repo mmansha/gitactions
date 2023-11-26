@@ -13,4 +13,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Merging feature int DEV
-              run: echo "Merging feature into dev"
+              run: |
+                echo "Merging feature into dev"
+                echo "branch from where pr originated ${{github.head_ref}}"
