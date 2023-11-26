@@ -13,4 +13,4 @@ jobs:
             - name: Changes into dev merged
               run: |
                 echo "Changes into dev merged"
-                echo " ${{ GITHUB_SHA }} "
+                echo  "$GITHUB_SHA" 
