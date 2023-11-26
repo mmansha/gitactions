@@ -18,5 +18,4 @@ jobs:
               run: |
                 echo "Merging feature into dev"
                 echo "branch from where pr originated ${{github.head_ref}}"
-                id = $(echo ${{github.head_ref}} | cut -d/ -f2 )
-                echo "ID $id"
+                echo ${{github.head_ref}} | cut -d/ -f2 
