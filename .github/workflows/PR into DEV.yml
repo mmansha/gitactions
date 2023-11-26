@@ -1,6 +1,8 @@
 name: DEV 
 on:
     pull_request:
+        types: 
+            - opened
         branches: 
             - 'dev'
 
